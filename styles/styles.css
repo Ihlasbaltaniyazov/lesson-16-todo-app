@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -11,4 +12,125 @@ ul {
 
 img {
   max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: url("../images/wallpaper.jpg");
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-radius: 4px;
+  background-color: #006789;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005254;
+}
+
+.btn:active {
+  opacity: 0.7;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#wrapper {
+  padding: 25px;
+  backdrop-filter: blur(25px) saturate(168%);
+  -webkit-backdrop-filter: blur(25px) saturate(168%);
+  background-color: rgba(17, 25, 40, 0.67);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  margin: 100px 0;
+  width: 600px;
+}
+
+#wrapper #auth h1 {
+  color: white;
+  font-size: 22px;
+}
+
+#wrapper #auth h2 {
+  font-size: 18px;
+  color: rgba(173, 173, 173, 0.6666666667);
+}
+
+#auth-content form {
+  display: none;
+}
+
+#auth-content form.active {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  gap: 20px;
+}
+
+#auth-content form input {
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.125);
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  font-size: 18px;
+  color: wheat;
+}
+
+.auth-changer {
+  color: rgba(173, 173, 173, 0.6666666667);
+  font-weight: bolder;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.auth-changer:hover {
+  opacity: 0.7;
+}
+
+.swal2-modal {
+  backdrop-filter: blur(6px) saturate(200%) !important;
+  -webkit-backdrop-filter: blur(6px) saturate(200%) !important;
+  background-color: rgba(17, 25, 40, 0.9) !important;
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.125) !important;
+}
+
+.swal2-confirm {
+  background-color: #006769 !important;
+}
+
+@media screen and (max-width: 500px) {
+  #wrapper {
+    min-height: 100vh;
+    margin: 0;
+    border-radius: 0;
+  }
+  #wrapper #auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  #wrapper #auth #auth-content {
+    width: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */

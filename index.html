@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 17</title>
+    <title>Todo App</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+
+
+    <div id="wrapper">
+        <div id="auth">
+            <h1 class="heading" id="auth-title" >Authorization</h1>
+            <h2 class="sub-heading" id="auth-type">Register</h2>
+
+            <div id="auth-content">
+                <form class="active" id="register-form">
+                    <input id="register-phone" required type="tel" placeholder="Entere your phone" />
+                    <input id="register-name" required type="text" placeholder="Entere your Username" />
+                    <input id="register-password" required type="password" placeholder="Entere your password" />
+                    <button class="btn">Register</button>
+
+                    <span class="auth-changer"  id="change-to-login">Already have an account? (Sign In)</span>
+                </form>
+
+                <form id="login-form">
+                    <input id="login-phone" type="tel" placeholder="Phone Number"/>
+                    <input id="login-password" type="password" placeholder="Password"/>
+                    <button class="btn">Sign In</button>
+
+                    <span class="auth-changer" id="change-to-register">Create An Account</span>
+                </form>
+            </div>
+        </div>
+        <div id="app"></div>
+    </div>
+
+
+
     <script type="module" src="/js/app.js"></script>
     <script type="module" src="/js/auth.js"></script>
 </body>
