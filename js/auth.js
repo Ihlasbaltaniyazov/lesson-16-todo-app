@@ -77,6 +77,7 @@ function login(e) {
          Swal.fire('Good job', 'You logined', 'success')
          localStorage.setItem("todo-token", data.payload.token)
          localStorage.setItem('todo-username', data.payload.name)
+         changeContentType('app')
         } else{
             Swal.fire('Wrong', data.message, 'error')
         }
@@ -84,6 +85,28 @@ function login(e) {
     .catch(err => console.log(err))
 }
 
+const auth = document.querySelector('#auth')
+const app = document.querySelector('#app')
+
+
+function changeContentType(type) {
+    switch (type) {
+        case 'auth':
+            auth.classList.add('active')
+            app.classList.remove('active')
+            break
+        case 'app' :
+            app.classList.add('active')
+            auth.classList.remove('active') 
+            break       
+    }
+}
+
+if (localStorage.getItem('todo-token')) {
+    changeContentType('app')
+} else {
+    changeContentType('auth')
+}
 
 
 

@@ -13,7 +13,7 @@
 
 
     <div id="wrapper">
-        <div id="auth">
+        <div id="auth" class="active  wrapper-item">
             <h1 class="heading" id="auth-title" >Authorization</h1>
             <h2 class="sub-heading" id="auth-type">Register</h2>
 
@@ -30,18 +30,26 @@
                 <form id="login-form">
                     <input id="login-phone" type="tel" placeholder="Phone Number"/>
                     <input id="login-password" type="password" placeholder="Password"/>
-                    <button class="btn">Sign In</button>
+                    <button class="btn">Login</button>
 
                     <span class="auth-changer" id="change-to-register">Create An Account</span>
                 </form>
             </div>
         </div>
-        <div id="app"></div>
+        <div class="wrapper-item active" id="app">
+            <form class="form">
+                <input type="text" placeholder="Напишите что-нибудь!" id="task-title">      
+                <select   id="task-category"></select>
+                <button class="btn">Submit</button>
+            </form>
+            <ul id="tasks">
+            </ul>
+        </div>
     </div>
 
 
 
-    <script type="module" src="/js/app.js"></script>
+    <script src="/js/app.js"></script>
     <script type="module" src="/js/auth.js"></script>
 </body>
 </html>
